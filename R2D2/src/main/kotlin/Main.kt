@@ -2,7 +2,7 @@ fun main() {
 
     var r2d2pos: List<Int>
 
-    r2d2pos = moverRobot(10, -5, 2)
+    r2d2pos = moverRobot(mov1, mov2, mov3)
     println("x: ${r2d2pos[0]}, y: ${r2d2pos[1]}, dir ${orientacionRobot(r2d2pos[2])},")
 
     moverRobot(0, 0, 0)
@@ -40,4 +40,10 @@ fun moverRobot(vararg movs: Int): List<Int> {
         if (dir == 3) dir = 0 else dir++
     }
     return listOf(posX, posY, dir)
+}
+fun pedirMovimiento() {
+    pintln('Escribe los siguientes movimientos: ')
+    var mov1 = readln()
+    var mov2 = readln()
+    var mov3 = readln()
 }
